@@ -18,7 +18,7 @@ from sklearn.metrics import roc_auc_score, f1_score, precision_score, recall_sco
 
 sys.path.append(os.path.dirname(__file__))
 from importlib import import_module
-model_arch = import_module('06_model_architecture')
+model_arch = import_module('model')
 
 # ── Hyperparameters ────────────────────────────────────────────────────────────
 POS_WEIGHT    = 5.0       # was 11.0

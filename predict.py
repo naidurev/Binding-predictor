@@ -133,9 +133,10 @@ def dssp_features(pdb_path, n):
 
     with open(pdb_path) as f:
         content = f.read()
-    clean = [l for l in content.splitlines(keepends=True)
-             if l.startswith(('ATOM  ','TER','END','CRYST1'))]
-    clean_str = HEADER_DUMMY + CRYST1_DUMMY + ''.join(clean)
+    lines = content.splitlines(keepends=True)
+    cryst1 = next((l for l in lines if l.startswith('CRYST1')), CRYST1_DUMMY)
+    clean = [l for l in lines if l.startswith(('ATOM  ','TER','END'))]
+    clean_str = HEADER_DUMMY + cryst1 + ''.join(clean)
 
     tmp_pdb  = tempfile.NamedTemporaryFile(suffix='.pdb',  delete=False, mode='w')
     tmp_dssp = tempfile.NamedTemporaryFile(suffix='.dssp', delete=False)

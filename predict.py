@@ -182,7 +182,7 @@ def dssp_features(pdb_path, n):
 
 
 def run_model(features, device):
-    model_arch = import_module('06_model_architecture')
+    model_arch = import_module('model')
     model      = model_arch.BindingSitePredictor().to(device)
     model.load_state_dict(torch.load(MODEL_PATH, map_location=device, weights_only=True))
     model.eval()

@@ -143,7 +143,7 @@ def dssp_features(pdb_path, n):
 
     try:
         result = subprocess.run(
-            ['mkdssp', tmp_pdb.name, tmp_dssp.name],
+            ['mkdssp', '--output-format', 'dssp', tmp_pdb.name, tmp_dssp.name],
             capture_output=True, text=True, timeout=60
         )
         if result.returncode != 0:

@@ -129,7 +129,7 @@ Input (N, 1291)
 Output: binding probability per residue ∈ [0, 1]
 ```
 
-**Parameters:** ~31.8M | **Training loss:** BCEWithLogitsLoss (pos_weight=5.0)
+**Parameters:** ~41.7M | **Training loss:** BCEWithLogitsLoss (pos_weight=5.0)
 
 ## Performance
 

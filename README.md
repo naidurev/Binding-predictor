@@ -135,14 +135,14 @@ Output: binding probability per residue ∈ [0, 1]
 
 ### COACH420 Benchmark (420 held-out proteins)
 
-| Metric | Our Model (v6) | P2Rank |
-|--------|---------------|--------|
-| AUC-ROC | **0.903** | 0.895 |
-| Avg Precision | **0.450** | — |
-| F1 (thresh=0.5) | 0.416 | **0.438** |
-| Precision | 0.283 | — |
-| Recall | **0.782** | — |
-| MCC | **0.419** | — |
+| Metric | Value |
+|--------|-------|
+| AUC-ROC | **0.903** |
+| Avg Precision | **0.450** |
+| F1 (thresh=0.5) | **0.416** |
+| Precision | **0.283** |
+| Recall | **0.782** |
+| MCC | **0.419** |
 
 ### Large-Scale Validation (858 unseen proteins from BioLiP)
 
@@ -153,7 +153,7 @@ Output: binding probability per residue ∈ [0, 1]
 | Recall | 0.640 | 0.733 |
 | MCC | 0.278 | 0.300 |
 
-Tested on 9 diverse unseen proteins (viral proteases, kinases, nuclear receptors) — average recall **0.91** at threshold=0.5.
+Validated on **858 unseen proteins** from BioLiP spanning diverse protein families — median AUC-ROC **0.913**.
 
 ## Training Data
 
